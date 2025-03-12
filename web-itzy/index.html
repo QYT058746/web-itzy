@@ -1,0 +1,263 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ITZY成員介紹</title>
+    <style>
+        .title1{
+            background-color: rgba(255, 255, 255, 0.58);
+            border-radius: 20px;
+            padding:0 60px 0 60px;
+            font-weight: bold;
+            color: rgb(10, 27, 101);
+            font-size: 30pt;
+        }
+        .title3{
+            color: #0a1b65;
+            font-size: 20pt;
+            font-weight: bold;
+        }
+        .title2{
+            color: #efefef;
+            font-size: 10pt;
+        }
+        body{
+            font-size: 20pt;
+            background-image:url('image/itzy-imaginary-friend.jpg');
+            background-color: rgba(255,255,255,30%);
+            background-blend-mode: lighten;
+            background-size:1600px ;
+
+        }
+        .title1:hover{
+            color: rgb(76, 115, 161);
+        }
+        a{
+            text-decoration: none;
+        }
+        .sFlh5c {
+            display:inline-block;
+        }
+        div{
+            text-align: center;
+            width: 290px;
+            height: 100px;
+        }
+        h1{
+            color: #efefef;
+            text-align: center;
+        }
+        button{
+            padding: 10px 20px;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            color: #000000;
+            border-radius: 5px;
+        }
+        iframe{
+            width: 290px;height: 150px;
+        }
+        h1:hover{
+            color:black;
+        }
+        footer{
+            text-align: center;
+        }
+        /* 讓輪播區置中並控制大小 */
+        .slider-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100vw; /* 讓輪播圖根據視窗寬度調整 */
+            height: 500px;
+            position: relative;
+            overflow: hidden; /* 隱藏超出的圖片 */
+            margin: auto; /* 讓整個輪播區置中 */
+        }
+
+        /* 內部圖片滑動區 */
+        .slider {
+            display: flex; /* 讓圖片橫向排列 */
+            transition: transform 0.5s ease; /* 平滑動畫效果 */
+            width: calc(420px * 13); /* 根據圖片數量計算總寬度 */
+        }
+
+        /* 單張圖片設置 */
+        .slide {
+            flex: 0 0 420px; /* 固定圖片寬度 */
+
+        }
+
+        /* 隱藏 radio 按鈕 */
+        input[type="radio"] {
+            display: none;
+        }
+
+        /* 左右切換按鈕樣式 */
+        .btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+            z-index: 10; /* 保證按鈕在最上層 */
+        }
+
+        /* 左按鈕 */
+        .prev {
+            left: 10px;
+        }
+
+        /* 右按鈕 */
+        .next {
+            right: 10px;
+        }
+
+        /* 根據 radio 的選擇移動圖片 */
+        #slide1:checked ~ .slider { transform: translateX(2000px); }
+        #slide2:checked ~ .slider { transform: translateX(1580px); }
+        #slide3:checked ~ .slider { transform: translateX(1160px); }
+        #slide4:checked ~ .slider { transform: translateX(740px); }
+        #slide5:checked ~ .slider { transform: translateX(320px); }
+        #slide6:checked ~ .slider { transform: translateX(-100px); }
+        #slide7:checked ~ .slider { transform: translateX(-520px); }
+        #slide8:checked ~ .slider { transform: translateX(-940px); }
+        #slide9:checked ~ .slider { transform: translateX(-1360px); }
+        #slide10:checked ~ .slider { transform: translateX(-1780px); }
+        #slide11:checked ~ .slider { transform: translateX(-2200px); }
+        #slide12:checked ~ .slider { transform: translateX(-2620px); }
+        #slide13:checked ~ .slider { transform: translateX(-3040px); }
+    </style>
+</head>
+<body>
+
+    <a href="https://zh.wikipedia.org/wiki/ITZY">
+        <h1>ITZY</h1>
+    </a>
+
+    <hr>
+    <div class="sFlh5c">
+        <a href="https://zh.wikipedia.org/wiki/%E9%BB%83%E7%A6%AE%E5%BF%97">
+            <p class="title1">黃禮志</p>
+        </a>
+        <a href="https://youtu.be/tnMFp53wrRg">
+            <img src="image/1515671d122eac86d398.jpg"width="200px"alt="yeji"/>
+            <p class="title3">隊長 領舞</p>
+            <p class="title2">她是我老婆 嘻嘻</p>
+        </a>
+    </div>
+
+    <div class="sFlh5c">
+        <a href="https://zh.wikipedia.org/wiki/Lia_(%E9%9F%93%E5%9C%8B%E6%AD%8C%E6%89%8B)">
+            <p class="title1">崔智秀</p>
+        </a>
+        <a href="https://youtu.be/fvTHBV0XIIk">
+            <img src="image/3090671d122c750fa675.jpg"width="200px" alt="lia"/>
+            <p class="title3">主唱</p>
+            <p class="title2">她也是我老婆 嘻嘻</p>
+        </a>
+    </div>
+
+    <div class="sFlh5c">
+        <a href="https://zh.wikipedia.org/wiki/%E7%94%B3%E7%95%99%E7%9C%9E">
+            <p class="title1">申留真</p>
+        </a>
+        <a href="https://youtu.be/jQNEiHzIcX4">
+            <img src="image/itzy-imaginary-friend-mv-teaser-photos-v0-muovm071a4xd1.jpg"width="200px" alt="ryujin"/>
+            <p class="title3">主舞 中心</p>
+            <p class="title2">她是我老公 是老公</p>
+        </a>
+    </div>
+
+    <div class="sFlh5c">
+        <a href="https://zh.wikipedia.org/wiki/%E6%9D%8E%E5%BD%A9%E9%A0%98">
+            <p class="title1">李彩領</p>
+        </a>
+        <a href="https://youtu.be/msSTlqos4fQ">
+            <img src="image/8613671d1229ebb2b723.jpg"width="200px" alt="chaeryeong"/>
+            <p class="title3">領舞</p>
+            <p class="title2">白月光!!!!是初戀!!!!</p>
+        </a>
+    </div>
+
+    <div class="sFlh5c">
+        <a href="https://zh.wikipedia.org/wiki/%E7%94%B3%E6%9C%89%E5%A8%9C">
+            <p class="title1">申有娜</p>
+        </a>
+        <a href="https://youtu.be/XxLigZQFc14">
+            <img src="image/9377671d12278250a897.jpg"width="200px" alt="yuna"/>
+            <p class="title3">門面</p>
+            <p class="title2">養大的小孩 以後娶回家</p>
+        </a>
+    </div>
+    <iframe width="853" height="480" src="https://www.youtube.com/embed/OSRMoNKftyk" title="ITZY YEJI &quot;Crown On My Head&quot; M/V @ITZY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    <iframe width="853" height="480" src="https://www.youtube.com/embed/dnXyghQd2O8" title="ITZY LIA &quot;Blossom&quot; Lyric Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe width="853" height="480" src="https://www.youtube.com/embed/z75GlxXEfZk" title="ITZY RYUJIN &quot;Run Away&quot; M/V @ITZY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe width="853" height="480" src="https://www.youtube.com/embed/HnXCezrJEdM" title="ITZY CHAERYEONG &quot;Mine&quot; M/V @ITZY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe width="853" height="480" src="https://www.youtube.com/embed/1843Q679cvg" title="ITZY YUNA &quot;Yet, but&quot; M/V  @ITZY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <div class="slider-container">
+        <!-- 單選按鈕，name="slider" 保持一致 -->
+        <input type="radio" id="slide1" name="slider" checked>
+        <input type="radio" id="slide2" name="slider">
+        <input type="radio" id="slide3" name="slider">
+        <input type="radio" id="slide4" name="slider">
+        <input type="radio" id="slide5" name="slider">
+        <input type="radio" id="slide6" name="slider">
+        <input type="radio" id="slide7" name="slider">
+        <input type="radio" id="slide8" name="slider">
+        <input type="radio" id="slide9" name="slider">
+        <input type="radio" id="slide10" name="slider">
+        <input type="radio" id="slide11" name="slider">
+        <input type="radio" id="slide12" name="slider">
+        <input type="radio" id="slide13" name="slider">
+
+        <!-- 內部輪播區 -->
+        <div class="slider">
+            <img src="image/dalla dalla.jpg" class="slide" alt="dalla dalla" height="275">
+            <img src="image/icy.jpg" class="slide" alt="icy" height="275">
+            <img src="image/wannabe.jpg" class="slide" alt="wannabe" height="275">
+            <img src="image/not shy.jpg" class="slide" alt="not shy" height="275">
+            <img src="image/mafia.jpeg" class="slide" alt="mafia" height="275">
+            <img src="image/loco.jpg" class="slide" alt="loco" height="275">
+            <img src="image/sneakers.jpg" class="slide" alt="sneakers" height="275">
+            <img src="image/cheshire.jpg" class="slide" alt="cheshire" height="275">
+            <img src="image/cake.jpg" class="slide" alt="cake" height="275">
+            <img src="image/born to be.jpg" class="slide" alt="born to be" height="275">
+            <img src="image/untouchble.jpeg" class="slide" alt="untouchble"height="275">
+            <img src="image/gold.jpg" class="slide" alt="gold" height="275">
+            <img src="image/imaginary friend.jpg" class="slide" alt="imaginary friend" height="275">
+        </div>
+
+        <!-- 左右切換按鈕 -->
+        <label for="slide1" class="btn prev">←</label>
+        <label for="slide11" class="btn next">→</label>
+
+        <!-- 底部導航點 -->
+        <div class="nav">
+            <label for="slide1"></label>
+            <label for="slide2"></label>
+            <label for="slide3"></label>
+            <label for="slide4"></label>
+            <label for="slide5"></label>
+            <label for="slide6"></label>
+            <label for="slide7"></label>
+            <label for="slide8"></label>
+            <label for="slide9"></label>
+            <label for="slide10"></label>
+            <label for="slide11"></label>
+            <label for="slide12"></label>
+            <label for="slide13"></label>
+        </div>
+    </div>
+
+<hr>
+
+
+</body>
+<footer>
+</footer>
+</html>
