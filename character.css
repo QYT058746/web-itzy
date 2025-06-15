@@ -1,0 +1,335 @@
+﻿/* ========== 基本樣式區 ========== */
+body {
+    font-size: 20pt;
+    overflow-x: hidden;
+    background-image:
+            radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.05) 80%, transparent 100%),
+            url('image/itzy-imaginary-friend.jpg');
+    background-blend-mode: lighten;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    transition: background 0.2s ease;
+    animation: fadeIn 1.2s ease-in;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+[id] {
+    scroll-margin-top: 80px;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    color: #efefef;
+    text-align: center;
+}
+
+h1:hover {
+    color: black;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #000;
+    border-radius: 5px;
+}
+
+/* ❗重點：不要再設寬高！交給 #mv iframe 處理 */
+
+
+
+footer {
+    text-align: center;
+}
+
+.sFlh5c {
+    text-align: center;
+    width: 290px;
+    height: 100px;
+}
+
+#mv {
+    display: flex;
+    flex-direction: row;       /* 橫向排列 */
+    flex-wrap: nowrap;
+    overflow-x: auto;          /* 顯示橫向捲軸 */
+    gap: 20px;
+    padding: 40px 20px;
+    scroll-behavior: smooth;
+}
+
+
+#mv iframe {
+    flex: 0 0 auto;
+    width: 270px;
+    height: 150px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
+/* ========== 標題樣式區 ========== */
+.title1 {
+    background-color: rgba(255, 255, 255, 0.58);
+    border-radius: 20px;
+    padding: 0 60px;
+    font-weight: bold;
+    color: rgb(10, 27, 101);
+    font-size: 30pt;
+}
+.title1:hover {
+    color: rgb(76, 115, 161);
+}
+
+.title3 {
+    color: #0a1b65;
+    font-size: 20pt;
+    font-weight: bold;
+}
+
+.title2 {
+    color: #efefef;
+    font-size: 10pt;
+}
+
+/* ========== 輪播區 ========== */
+.slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    margin: -50px auto 0 auto;
+}
+
+.slider {
+    display: flex;
+    width: calc(420px * 13);
+    transition: transform 15s ease;
+}
+
+.slide {
+    flex: 0 0 420px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 10;
+}
+.prev { left: 10px; }
+.next { right: 10px; }
+
+#slide1:checked ~ .slider { transform: translateX(2000px); }
+#slide2:checked ~ .slider { transform: translateX(1580px); }
+#slide3:checked ~ .slider { transform: translateX(1160px); }
+#slide4:checked ~ .slider { transform: translateX(740px); }
+#slide5:checked ~ .slider { transform: translateX(320px); }
+#slide6:checked ~ .slider { transform: translateX(-100px); }
+#slide7:checked ~ .slider { transform: translateX(-520px); }
+#slide8:checked ~ .slider { transform: translateX(-940px); }
+#slide9:checked ~ .slider { transform: translateX(-1360px); }
+#slide10:checked ~ .slider { transform: translateX(-1780px); }
+#slide11:checked ~ .slider { transform: translateX(-2200px); }
+#slide12:checked ~ .slider { transform: translateX(-2620px); }
+#slide13:checked ~ .slider { transform: translateX(-3040px); }
+
+/* ========== 成員卡片（翻轉） ========== */
+.member-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+    padding: 100px 20px;
+}
+
+.flip-card {
+    width: 320px;
+    height: 420px;
+    perspective: 1200px;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeSlideUp 1s ease forwards;
+}
+
+.flip-card:nth-of-type(1) { animation-delay: 0.1s; }
+.flip-card:nth-of-type(2) { animation-delay: 0.3s; }
+.flip-card:nth-of-type(3) { animation-delay: 0.5s; }
+.flip-card:nth-of-type(4) { animation-delay: 0.7s; }
+.flip-card:nth-of-type(5) { animation-delay: 0.9s; }
+
+.flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-front, .flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    backdrop-filter: blur(10px);
+}
+
+.flip-front img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+}
+.flip-front p {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 12px;
+}
+.flip-back {
+    transform: rotateY(180deg);
+    padding: 20px;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* ========== 動畫特效 ========== */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes floatUpDown {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+}
+
+@keyframes slideFadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeSlideShow {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeSlideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========== 成員圖片滑入淡入 ========== */
+.sFlh5c {
+    display: inline-block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.sFlh5c:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+.sFlh5c img {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideFadeIn 0.8s forwards;
+}
+.sFlh5c:nth-of-type(1) img { animation-delay: 0.1s; }
+.sFlh5c:nth-of-type(2) img { animation-delay: 0.3s; }
+.sFlh5c:nth-of-type(3) img { animation-delay: 0.5s; }
+.sFlh5c:nth-of-type(4) img { animation-delay: 0.7s; }
+.sFlh5c:nth-of-type(5) img { animation-delay: 0.9s; }
+
+/* ========== 導覽列樣式 ========== */
+.top-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(10, 27, 101, 0.95);
+    z-index: 999;
+    padding: 10px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    backdrop-filter: blur(6px);
+}
+
+.top-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+}
+
+.top-nav li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: background 0.3s, color 0.3s;
+}
+.top-nav li a:hover {
+    background-color: #fff;
+    color: #0a1b65;
+}
+
+.top-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(10, 27, 101, 0.95);
+    z-index: 999;
+    padding: 10px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    backdrop-filter: blur(6px);
+    transform: translateY(-100%);
+    transition: transform 0.4s ease;
+}
+
+.top-nav.show {
+    transform: translateY(0);
+}
